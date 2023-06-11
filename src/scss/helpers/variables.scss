@@ -1,0 +1,52 @@
+//fonts
+$main-font : '../../fonts/Bodrum.ttf';
+//colors
+$main-color : #FF431C;
+$alt-color : #ffd300;
+$main-orange-color : #FF431C;
+$alt-yellow-color : #ffd300;
+$main-green-color : #009F02;
+$alt-pink-color : #be1678;
+$main-blue-color : #00adee;
+$alt-blue-color : #0f9ad1;
+$main-black-color : #231f20;
+$bg-color : #F1F5F9;
+// $black-color : #333333;
+$light-gray-color : #D3D3D3;
+$gray-color : #eaeaea;
+$gray-alt-color : #ccc;
+$gray-third-color : #EEEEEE;
+$sec-paragraph-color: #b9b9b9;
+$button-gray-color : #6C757D;
+$overlay-color :rgba(0, 0, 0, 0.5);
+$blue-color : #0075ff;
+$blue-alt-color : #0d69d5;
+$orange-color : #f59e0b;
+$green-color : #22c55e;
+$red-color : #f44336;
+$main-paragraph-color : #666;
+$main-gray-color : #fafafa;
+//social media platforms color
+$github-color : #171515;
+//prefixes
+$prefixes : -webkit- -moz- -o- -ms-;
+// media queries
+//animation
+$main-transition-duration : 0.3s;
+$maxMobile : "max-width:767px";
+$maxSmall : "max-width:991px";
+$maxLarge : "max-width:1199px";
+$minSmall : "min-width:768px";
+$minMedium : "min-width:992px";
+$minLarge : "min-width:1200px";
+
+//main padding and margin
+$mainPaddingTop : 50px;
+$mainPaddingBottom : 50px;
+//border
+$main-border-radius : 10px;
+$rad10 : 10px;
+$rad20 : 20px;
+$rad6 : 6px;
+//shadow
+$mainBoxShadow : 0 0 10px rgb(48, 45, 45);

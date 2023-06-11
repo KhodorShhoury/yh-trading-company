@@ -1,0 +1,67 @@
+@import 'normalize-scss';
+@import '../../helpers/variables';
+@import '../../helpers/mixins';
+
+.header {
+    background-color: white;
+    @include prefixer(box-shadow, 0 0 10px #ddd);
+    position: relative;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 72px;
+            }
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+
+            .menu-toggle {
+                display: none;
+                font-size: 32px;
+                @media(max-width:767px) {
+                    display: block;
+                }
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                list-style: none;
+
+                @media(max-width:767px) {
+                    position: absolute;
+                    left: 0;
+                    top: -702px;
+                    flex-direction: column;
+                    background-color: white;
+                    width: 100%;
+                    @include prefixer(box-shadow, 0 2px 1px #ddd);
+                }
+                .nav-link {
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 72px;
+                        color: black;
+                        padding: 0px 30px;
+                        font-size: 18px;
+                        text-decoration: none;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
