@@ -8,11 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from 'swiper';
+import { Navigation, Pagination } from 'swiper';
 function HomeProducts() {
     return (
         <div className="home-products">
-            <MainHeading title="products" />
+            <MainHeading title="our products" />
             <div className="container">
                 <SeeMore />
                 <div className="products">
@@ -35,7 +35,7 @@ function HomeProducts() {
                             }
                         }
                         spaceBetween={30}
-                        Navigation={true}
+                        navigation={true}
                         modules={[Navigation]}
                         className="mySwiper"
                     >
@@ -44,58 +44,62 @@ function HomeProducts() {
                                 <img src={cupsImage} alt="product-image" />
                             </div>
                             <div className="text">
-                                <div className="category">Kitchen</div>
+                            <div className="category">Kitchen</div>
                                 <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
                                 <div className="title">Salad Spoon</div>
                             </div>
 
-                        </div></SwiperSlide>
+                        </div>
+                        </SwiperSlide>
                         <SwiperSlide> <div className="product-box">
                             <div className="image">
                                 <img src={lampImage} alt="product-image" />
                             </div>
                             <div className="text">
+                            <div className="category">Kitchen</div>
                                 <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
                                 <div className="title">Sieve</div>
                             </div>
 
-                        </div></SwiperSlide>
+                        </div>
+                        </SwiperSlide>
                         <SwiperSlide>  <div className="product-box">
                             <div className="image">
                                 <img src={cupsImage} alt="product-image" />
                             </div>
                             <div className="text">
+                            <div className="category">Kitchen</div>
                                 <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
                                 <div className="title">Sweet Shovel</div>
                             </div>
 
-                        </div></SwiperSlide>
+                        </div>
+                        </SwiperSlide>
                         <SwiperSlide><div className="product-box">
                             <div className="image">
                                 <img src={cupsImage} alt="product-image" />
                             </div>
                             <div className="text">
+                            <div className="category">Kitchen</div>
                                 <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
                                 <div className="title">Sweet Shovel</div>
                             </div>
 
-                        </div></SwiperSlide>
+                        </div>
+                        </SwiperSlide>
                         <SwiperSlide> <div className="product-box">
                             <div className="image">
                                 <img src={cupsImage} alt="product-image" />
                             </div>
                             <div className="text">
+                            <div className="category">Kitchen</div>
                                 <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
                                 <div className="title">Sweet Shovel</div>
                             </div>
 
-                        </div></SwiperSlide>
+                        </div>
+                        </SwiperSlide>
                     </Swiper>
-
-
-
-
-
                 </div>
             </div>
         </div>

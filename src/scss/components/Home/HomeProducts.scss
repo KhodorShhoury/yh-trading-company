@@ -24,7 +24,8 @@
                 }
 
                 .image {
-                    @include circle(150px);
+                    width: 200px;
+                    height: 200px;
                     @include contentCenterer();
                     // background-color: $gray-color;
                     overflow: hidden;
@@ -53,6 +54,14 @@
                         color: $main-paragraph-color;
                         max-width: 200px;
                     }
+                }
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+
+                &::after {
+                    color: $main-orange-color;
                 }
             }
         }

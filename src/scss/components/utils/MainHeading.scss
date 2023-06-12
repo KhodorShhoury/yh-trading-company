@@ -5,6 +5,8 @@
     margin: 50px auto;
     font-size: 42px;
     span{
-        color: $main-orange-color;
+        &:last-child{
+            color: $main-orange-color;
+        }
     }
 }

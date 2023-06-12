@@ -8,7 +8,7 @@ import SeeMore from '../utils/SeeMore';
 function HomeCategories() {
   return (
     <section className="home-categories">
-    <MainHeading title= "Categories"/>
+    <MainHeading title= "Our Categories"/>
     <div className="container">
     <SeeMore/>
       <div className="categories">

@@ -1,0 +1,14 @@
+@import '../../helpers/variables.scss';
+.about-us{
+    // padding-top: $mainPaddingTop;
+    padding-bottom: $mainPaddingBottom;
+    .container{
+        .description{
+            text-align: center;
+            color: $main-paragraph-color;
+            // font-weight: bold;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
+}
