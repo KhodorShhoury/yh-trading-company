@@ -39,24 +39,25 @@ function HomeProducts() {
                         modules={[Navigation]}
                         className="mySwiper"
                     >
-                        <SwiperSlide> <div className="product-box">
-                            <div className="image">
-                                <img src={cupsImage} alt="product-image" />
-                            </div>
-                            <div className="text">
-                            <div className="category">Kitchen</div>
-                                <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
-                                <div className="title">Salad Spoon</div>
-                            </div>
+                        <SwiperSlide>
+                            <div className="product-box">
+                                <div className="image">
+                                    <img src={cupsImage} alt="product-image" />
+                                </div>
+                                <div className="text">
+                                    <div className="category">Kitchen</div>
+                                    <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
+                                    <div className="title">Salad Spoon</div>
+                                </div>
 
-                        </div>
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide> <div className="product-box">
                             <div className="image">
                                 <img src={lampImage} alt="product-image" />
                             </div>
                             <div className="text">
-                            <div className="category">Kitchen</div>
+                                <div className="category">Kitchen</div>
                                 <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
                                 <div className="title">Sieve</div>
                             </div>
@@ -68,7 +69,7 @@ function HomeProducts() {
                                 <img src={cupsImage} alt="product-image" />
                             </div>
                             <div className="text">
-                            <div className="category">Kitchen</div>
+                                <div className="category">Kitchen</div>
                                 <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
                                 <div className="title">Sweet Shovel</div>
                             </div>
@@ -80,7 +81,7 @@ function HomeProducts() {
                                 <img src={cupsImage} alt="product-image" />
                             </div>
                             <div className="text">
-                            <div className="category">Kitchen</div>
+                                <div className="category">Kitchen</div>
                                 <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
                                 <div className="title">Sweet Shovel</div>
                             </div>
@@ -92,7 +93,7 @@ function HomeProducts() {
                                 <img src={cupsImage} alt="product-image" />
                             </div>
                             <div className="text">
-                            <div className="category">Kitchen</div>
+                                <div className="category">Kitchen</div>
                                 <div className="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</div>
                                 <div className="title">Sweet Shovel</div>
                             </div>

@@ -5,40 +5,30 @@ import lampStandImage from '../../assets/imgs/lamp-stand.png';
 import '../../scss/components/Home/HomeCategories.scss';
 import MainHeading from '../utils/MainHeading';
 import SeeMore from '../utils/SeeMore';
+import HomeRandomCategoriesHook from '../../customHooks/home-random-categories-hook';
 function HomeCategories() {
+  const [randomCategories] = HomeRandomCategoriesHook();
   return (
     <section className="home-categories">
     <MainHeading title= "Our Categories"/>
     <div className="container">
-    <SeeMore/>
+    <SeeMore pathText= 'categories'/>
       <div className="categories">
-        <div className="category-box">
-        <div className="text">
-              <div className="category-title">Kitchen</div>
-              <div className="category-description">Discover Our New Tools</div>
-        </div>
-        <div className="image">
-          <img src= {lampStandImage} alt="" />
-        </div>
-        </div>
-        <div className="category-box">
-        <div className="text">
-              <div className="category-title">Kitchen</div>
-              <div className="category-description">Discover Our New Tools</div>
-        </div>
-        <div className="image">
-          <img src= {cupsImage} alt="" />
-        </div>
-        </div>
-        <div className="category-box">
-        <div className="text">
-              <div className="category-title">Kitchen</div>
-              <div className="category-description">Discover Our New Tools</div>
-        </div>
-        <div className="image">
-          <img src= {blanketImage} alt="" />
-        </div>
-        </div>
+          {randomCategories ? (
+            randomCategories.map((category,i)=>{
+          return (
+            <div className="category-box">
+              <div className="text">
+                <div className="category-title">{category.title}</div>
+                <div className="category-description">{category.slogan}</div>
+              </div>
+              <div className="image">
+                <img src={category.media[0].original_url} alt="" />
+              </div>
+            </div>
+          )
+        })
+      ) : <h1>Loading</h1>}
       </div>
     </div>
     </section>
