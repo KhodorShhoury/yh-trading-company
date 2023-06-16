@@ -8,13 +8,14 @@ function AllCategoriesPageHook() {
         dispatch(getAllCategories())
     },[])
     const categories = useSelector(state => state.allCategories.categories);
+    const loading = useSelector(state => state.allCategories.loading);
     let allcategories = [];
     if (categories) {
         if (categories.data) {
             allcategories = categories.data.data.categories.data
         }
     }
-    return [allcategories]
+    return [allcategories,loading]
 }
 
 export default AllCategoriesPageHook

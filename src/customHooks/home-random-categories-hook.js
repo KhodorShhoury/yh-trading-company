@@ -8,13 +8,14 @@ function HomeRandomCategoriesHook() {
         dispatch(getRandomCategories())
     },[])
     const categories = useSelector(state => state.allCategories.randomCategories);
+  const loading = useSelector(state => state.allCategories.loading);
     let randomCategories = [];
     if(categories){
       if(categories.data){
         randomCategories = categories.data.data.categories.data
       }
     }
-  return [randomCategories]
+  return [randomCategories,loading]
 }
 
 export default HomeRandomCategoriesHook;

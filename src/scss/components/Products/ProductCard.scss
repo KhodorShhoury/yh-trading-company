@@ -1,0 +1,64 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: $main-border-radius;
+    border: 1px solid #ccc;
+}
+
+.product-card:not(:last-child) {
+    margin-right: 15px;
+}
+
+@media (max-width: 767px) {
+    .product-card:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.product-card .image {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-card .image img {
+    max-width: 100%;
+}
+
+.product-card .text {
+    margin-top: 15px;
+    padding: 15px 0px;
+}
+
+.product-card .text .category {
+    color: #666;
+    /* Replace with your desired color */
+    font-weight: bold;
+    
+}
+
+.product-card .text .title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: $main-orange-color;
+    // text-decoration: none;
+}
+
+.product-card .text .description {
+    color: $main-paragraph-color;
+    /* Replace with your desired color */
+    max-width: 200px;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px 0;
+}

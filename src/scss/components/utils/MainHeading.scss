@@ -4,6 +4,8 @@
     width: fit-content;
     margin: 50px auto;
     font-size: 42px;
+    position: relative;
+    z-index: 1;
     span{
         &:last-child{
             color: $main-orange-color;

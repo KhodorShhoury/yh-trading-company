@@ -1,0 +1,17 @@
+@import '../../helpers/variables.scss';
+.product-gallery{
+    width: 45%;
+    @media($maxSmall){
+        width: 80%;
+    }
+    .mySwiper2{
+        width: 100%;
+        margin-bottom: 25px;
+        border: 1px solid $gray-color;
+    }
+    .mySwiper{
+    }
+    img{
+        max-width: 100%;
+    }
+}

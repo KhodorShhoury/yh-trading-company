@@ -1,0 +1,42 @@
+@import '../../helpers/variables.scss';
+
+.category-box {
+    background-color: $gray-color;
+    display: flex;
+    padding: 15px;
+    border-radius: $main-border-radius;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    .text {
+        height: fit-content;
+        max-width: 50%;
+
+        .category-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: $main-paragraph-color;
+        }
+
+        .category-description {
+            color: $main-orange-color;
+            font-weight: bold;
+            font-size: 28px;
+        }
+    }
+
+    .image {
+        width: 250px;
+        position: absolute;
+        right: 0px;
+        top: 0;
+
+        @media (max-width: 767px) {
+            width: 200px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

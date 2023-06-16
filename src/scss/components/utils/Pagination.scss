@@ -1,0 +1,17 @@
+.page-link {
+    background-color: #f9f9f9 !important;
+    color: #272727 !important;
+    border-radius: 10px !important;
+    border: solid 1px 272727 !important;
+    margin-right: 10px;
+}
+
+.page-link:hover {
+    background-color: #DC3545 !important;
+    color: white !important;
+    border: solid 1px 272727 !important;
+}
+
+.page-link.selected {
+    color: red;
+}

@@ -1,9 +1,11 @@
 @import './scss/layout/normalize.scss';
 @import './scss/layout/grid.scss';
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: 'Cairo', sans-serif;
 }

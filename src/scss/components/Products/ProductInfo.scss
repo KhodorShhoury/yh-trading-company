@@ -1,0 +1,48 @@
+@import '../../helpers/variables.scss';
+
+.product-info {
+    width: 45%;
+
+    @media ($maxSmall) {
+        width: 100%;
+    }
+
+    .title {
+        h1 {
+            color: $main-orange-color;
+        }
+    }
+
+    .description {
+        h2 {
+            font-size: 28px;
+        }
+
+        p {
+            color: $main-paragraph-color;
+            margin: 10px 0;
+        }
+    }
+
+    .info {
+        ul {
+            list-style-type: none;
+
+            li {
+                margin-bottom: 15px;
+
+                span {
+                    &:first-child {
+                        color: $main-orange-color;
+                        font-weight: bold;
+                    }
+
+                    &:nth-child(2) {
+                        color: $main-paragraph-color;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -18,7 +18,7 @@ export const getAllCategories = () => async(dispatch) =>{
 export const getRandomCategories = () => async(dispatch) =>{
     try{
         //request the categories
-        const response = await baseURL.get(`/api/categories/random`);
+        const response = await baseURL.get(`/api/random/categories`);
         dispatch({
             type: GET_RANDOM_CATEGORIES,
             payload : response,

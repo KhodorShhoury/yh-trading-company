@@ -13,16 +13,22 @@ import AllCategoriesPage from './pages/Categories/AllCategoriesPage';
 import HomePage from './pages/HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AllProductsPage from './pages/Products/AllProductsPage';
+import ProductDetailsPage from './pages/Products/ProductDetailsPage';
+import ProductsByCategoryPage from './pages/Products/ProductsByCategoryPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
     <BrowserRouter>
+    <ScrollToTop/>
         <Header />
       <Routes>
         <Route index element = {<HomePage/>}/>
         <Route path="/categories" element={<AllCategoriesPage />}/>
         <Route path="/products" element={<AllProductsPage />}/>
+          <Route path="/categories/:categoryID" element={<ProductsByCategoryPage />}/>
+        <Route path="/products/:productID" element={<ProductDetailsPage />}/>
       </Routes>
     </BrowserRouter>
     

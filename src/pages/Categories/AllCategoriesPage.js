@@ -1,12 +1,14 @@
 import React from 'react'
 import AllCategoriesPageHook from '../../customHooks/all-categories-page-hook'
-import '../../scss/components/Categories/AllCategoriesPage.scss';
 import CategoriesContainer from '../../components/Categories/CategoriesContainer';
+import { TailSpin } from 'react-loader-spinner';
+import Pagination from '../../components/utils/Pagination';
 function AllCategoriesPage() {
-    const [allCategories] = AllCategoriesPageHook();
+    const [allCategories, loading] = AllCategoriesPageHook();
     return (
         <>
-            <CategoriesContainer allCategories = {allCategories}/>
+            <CategoriesContainer allCategories={allCategories} loading={loading} />
+            <Pagination pagesCount={10}/>
         </>
     )
 }
