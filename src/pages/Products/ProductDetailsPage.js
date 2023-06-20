@@ -6,7 +6,7 @@ import { ThreeDots } from 'react-loader-spinner';
 
 function ProductDetailsPage() {
   return (
-    <div >
+    <div style={{ minHeight: '100vh', paddingTop: '72px' }}>
       <div className="container" style={{ minHeight: '100vh' }}>
       <ProductDetails />
       </div>

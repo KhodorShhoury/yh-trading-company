@@ -16,6 +16,7 @@ import AllProductsPage from './pages/Products/AllProductsPage';
 import ProductDetailsPage from './pages/Products/ProductDetailsPage';
 import ProductsByCategoryPage from './pages/Products/ProductsByCategoryPage';
 import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/utils/Footer';
 
 function App() {
   return (
@@ -28,10 +29,10 @@ function App() {
         <Route path="/categories" element={<AllCategoriesPage />}/>
         <Route path="/products" element={<AllProductsPage />}/>
           <Route path="/categories/:categoryID" element={<ProductsByCategoryPage />}/>
-        <Route path="/products/:productID" element={<ProductDetailsPage />}/>
+        <Route path="/products/:productId" element={<ProductDetailsPage />}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
-    
     </div>
   );
 }

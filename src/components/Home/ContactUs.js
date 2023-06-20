@@ -7,12 +7,12 @@ import { faFacebook, faInstagram, faTiktok, faWhatsapp } from '@fortawesome/free
 function ContactUs() {
   return (
     <div className="contact-us">
-      <MainHeading title='Get in touch' />
+      <MainHeading title='Get in touch' id= 'contact'/>
       <div className="container">
         <div className="socials">
           <div className="box">
             <div className="icon"><FontAwesomeIcon icon={faWhatsapp} /></div>
-            <h2 className='title'>WhatsApp</h2>
+            <h2 className='title'>+961 3 083 785</h2>
           </div>
           <div className="box">
             <div className="icon"><FontAwesomeIcon icon={faFacebook} /></div>

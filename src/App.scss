@@ -1,0 +1,31 @@
+@import 'scss/helpers/variables.scss';
+
+.pagination-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .pagination-item {
+        margin-right: 2px;
+        border: 1px solid $gray-color;
+        border-radius: 4px;
+        padding: 7px;
+        &.pagination-active-item {
+            background-color: $main-orange-color;
+
+        }
+
+        .pagination-link {
+            // padding: 5px 15px;
+            color: $main-orange-color;
+            text-decoration: none;
+            font-weight: bold;
+
+            &.pagination-active-link {
+                color: white;
+            }
+        }
+    }
+}

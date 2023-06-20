@@ -1,0 +1,129 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.footer {
+    background-color: #191919;
+
+    .container {
+        .top {
+            padding: 15px;
+
+            .boxes {
+                display: flex;
+                justify-content: space-between;
+
+                @media ($maxMobile) {
+                    flex-direction: column;
+                }
+
+                .box {
+                    display: inline-block;
+
+                    @media ($maxMobile) {
+                        margin-bottom: 15px;
+                    }
+
+                    @media ($minSmall) {
+                        width: calc(100% / 3);
+                        margin-right: 10%;
+                    }
+
+                    .title {
+                        font-size: 24px;
+                        color: white;
+                        text-transform: uppercase;
+                        margin-bottom: 15px;
+                    }
+
+                    &.about {
+                        p {
+                            color: $main-paragraph-color;
+                        }
+                    }
+
+                    &.categories {
+                        @media($maxMobile) {
+                            width: 50%;
+                        }
+
+                        ul {
+                            list-style-type: none;
+
+                            li {
+                                margin-bottom: 5px;
+
+                                a {
+                                    text-decoration: none;
+                                    color: $main-paragraph-color;
+                                    display: block;
+
+                                    svg {
+                                        margin-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.quick-links {
+                        @media($maxMobile) {
+                            width: 50%;
+                        }
+
+                        ul {
+                            list-style-type: none;
+
+                            li {
+                                margin-bottom: 5px;
+
+                                a {
+                                    text-decoration: none;
+                                    color: $main-paragraph-color;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid $main-paragraph-color;
+            align-items: center;
+
+            @media($maxMobile) {
+                flex-direction: column-reverse;
+            }
+
+            .copy-right {
+                color: $main-paragraph-color;
+                text-align: center;
+            }
+
+            .socials {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                @media ($maxMobile) {
+                    margin-bottom: 15px;
+                }
+
+                .icon {
+                    @include circle(50px);
+                    @include contentCenterer();
+                    margin-right: 5px;
+                    background-color: #313131;
+
+                    svg {
+                        color: #b9b9b9;
+                    }
+                }
+            }
+        }
+    }
+}

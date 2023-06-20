@@ -2,13 +2,10 @@ import React from 'react'
 import SingleProductHook from '../../customHooks/single-product-hook'
 import { useParams } from 'react-router-dom';
 import '../../scss/components/Products/ProductInfo.scss';
-function ProductInfo() {
-  const params = useParams();
-  const productId = params.productID;
-  const [singleProduct,loading] = SingleProductHook(productId);    
+function ProductInfo({singleProduct}) {   
   return (
     <div className='product-info'>
-        {!loading ? (
+        {singleProduct ? (
           <>
           <div className="title">
           <h1>{singleProduct.name}</h1>

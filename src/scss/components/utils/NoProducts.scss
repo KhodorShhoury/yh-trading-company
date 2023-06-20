@@ -1,0 +1,15 @@
+@import '../../helpers/variables.scss';
+.no-products{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    img{
+        max-width: 300px;
+    }
+    h3{
+        text-align: center;
+        color: $main-paragraph-color;
+        font-size: 28px;
+    }
+}

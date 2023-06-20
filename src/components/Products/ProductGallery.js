@@ -11,10 +11,8 @@ import "swiper/css/thumbs";
 import { FreeMode, Thumbs } from "swiper";
 import { useParams } from 'react-router-dom';
 import '../../scss/components/Products/ProductGallery.scss';
-function ProductGallery() {
-    const params = useParams();
-    const productId = params.productID;
-    const [singleProduct] = SingleProductHook(productId);    
+function ProductGallery({singleProduct}) {
+   
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
         <div className='product-gallery'>

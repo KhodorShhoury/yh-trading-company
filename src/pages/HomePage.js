@@ -5,6 +5,7 @@ import Features from '../components/Home/Features'
 import HomeCategories from '../components/Home/HomeCategories'
 import HomeProducts from '../components/Home/HomeProducts'
 import ContactUs from '../components/Home/ContactUs'
+import Footer from '../components/utils/Footer'
 
 function HomePage() {
   return (

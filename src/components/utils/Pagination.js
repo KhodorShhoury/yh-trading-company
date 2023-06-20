@@ -1,14 +1,15 @@
 import React from 'react'
 import ReactPaginate from "react-paginate";
 import '../../scss/components/utils/Pagination.scss';
-const Pagination = ({ pagesCount, onPress }) => {
+import Pagination from 'react-js-pagination';
+const DataPagination = ({ pagesCount, onPress }) => {
 
     const handlePageClick = (data) => {
 
         onPress(data.selected + 1)
     };
     return (
-        <ReactPaginate
+        <Pagination
             breakLabel="..."
             nextLabel="next"
             onPageChange={handlePageClick}
@@ -30,4 +31,4 @@ const Pagination = ({ pagesCount, onPress }) => {
     )
 }
 
-export default Pagination
+export default DataPagination

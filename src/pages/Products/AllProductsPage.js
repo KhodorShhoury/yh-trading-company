@@ -1,34 +1,38 @@
-import React from 'react'
-import ProductsContainer from '../../components/Products/ProductsContainer'
-import AllProductsPageHook from '../../customHooks/all-products-page-hook'
+import React from 'react';
+import ProductsContainer from '../../components/Products/ProductsContainer';
+import AllProductsPageHook from '../../customHooks/all-products-page-hook';
 import { TailSpin } from 'react-loader-spinner';
+import Pagination from 'react-js-pagination';
+import SearchProductsHook from '../../customHooks/search-products-hook';
+
 function AllProductsPage() {
-    const [allProducts,loading] = AllProductsPageHook();
+  const [allProducts, loading, currentPage, total, perPage, getPage] = AllProductsPageHook();
 
   return (
     <>
-      {!loading ? (
-        <ProductsContainer allProducts={allProducts} />
-      ) : <TailSpin
-        height="80"
-        width="80"
-        color="#FF431C"
-        ariaLabel="tail-spin-loading"
-        radius="1"
-        wrapperStyle={{
-          width: '100%',
-          height : '100vh',
-          display: 'flex',
-          justifyContent: "center",
-          alignItems : 'center',
-        }}
-        wrapperClass=""
-        visible={true}
-      />
-      }
+        <div style={{minHeight:'100vh',paddingTop:'72px'}}>
+          <ProductsContainer allProducts={allProducts} loading = {loading}/>
+          {
+            total > 0 &&
+          <Pagination
+            activePage={currentPage}
+            totalItemsCount={total}
+            itemsCountPerPage={perPage}
+            onChange={pageNumber => getPage(pageNumber)}
+            nextPageText='next'
+            prevPageText='prev'
+            innerClass='pagination-ul'
+            activeClass='pagination-active-item'
+            activeLinkClass='pagination-active-link'
+            itemClass='pagination-item'
+            linkClass='pagination-link'
+          />
+            
+          }
+          
+        </div>
     </>
-    
-  )
+  );
 }
 
-export default AllProductsPage
+export default AllProductsPage;

@@ -2,20 +2,20 @@ import React from 'react'
 import CategoryCard from './CategoryCard'
 import '../../scss/components/Categories/CategoriesContainer.scss';
 import { TailSpin } from 'react-loader-spinner';
+import NoProducts from '../utils/NoProducts';
 function CategoriesContainer({ allCategories ,loading}) {
     return (
         <div className="all-categories">
             <div className="container">
-            
-
             {
                 !loading ? (
                     <div className="categories">
-                            {allCategories.map((category, index) => {
+                            {allCategories.data.length ?
+                                allCategories.data.map((category, index) => {
                                 return (
                                     <CategoryCard category={category} key={index} />
                                 )
-                            })}
+                            }) : <NoProducts title= "categories"/>}
                     </div>
                     ) : <TailSpin
                         height="80"
