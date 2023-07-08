@@ -7,24 +7,35 @@ import { faFacebook, faInstagram, faTiktok, faWhatsapp } from '@fortawesome/free
 function ContactUs() {
   return (
     <div className="contact-us">
-      <MainHeading title='Get in touch' id= 'contact'/>
+      <MainHeading title='Get in touch' id='contact' />
       <div className="container">
         <div className="socials">
           <div className="box">
-            <div className="icon"><FontAwesomeIcon icon={faWhatsapp} /></div>
-            <h2 className='title'>+961 3 083 785</h2>
+            <a href="https://wa.me/9613083785">
+              <div className="icon"><FontAwesomeIcon icon={faWhatsapp} /></div>
+              <h2 className='title'>+961 3 083 785</h2>
+            </a>
+
           </div>
           <div className="box">
-            <div className="icon"><FontAwesomeIcon icon={faFacebook} /></div>
-            <h2 className='title'>YH Trading</h2>
+            <a href="https://www.facebook.com/YH-Trading-109589635492109/">
+              <div className="icon"><FontAwesomeIcon icon={faFacebook} /></div>
+              <h2 className='title'>YH Trading</h2>
+            </a>
+
           </div>
           <div className="box">
-            <div className="icon"><FontAwesomeIcon icon={faInstagram} /></div>
-            <h2 className='title'>yh_trading</h2>
+            <a href="https://instagram.com/yh_trading?igshid=MzRlODBiNWFlZA==">
+              <div className="icon"><FontAwesomeIcon icon={faInstagram} /></div>
+              <h2 className='title'>yh_trading</h2>
+            </a>
+
           </div>
           <div className="box">
-            <div className="icon"><FontAwesomeIcon icon={faTiktok} /></div>
-            <h2 className='title'>yh_trading</h2>
+            <a href="https://www.tiktok.com/@yh_trading?_t=8dBZElVLG9i&_r=1">
+              <div className="icon"><FontAwesomeIcon icon={faTiktok} /></div>
+              <h2 className='title'>yh_trading</h2>
+            </a>
           </div>
         </div>
         <div className="location">

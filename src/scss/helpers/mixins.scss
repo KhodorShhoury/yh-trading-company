@@ -9,10 +9,11 @@
     height: 100%;
     background-color: rgba($color, $opacity);
 }
+
 // auto add prefixes
 @mixin prefixer($property, $value, $prefixes: webkit moz o ms) {
     @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
+        #{'-' + $prefix + '-' + $property}: $value;
     }
 
     // Output standard non-prefixed declaration
@@ -25,13 +26,15 @@
 
 @mixin keyframes($name) {
     @-webkit-keyframes #{$name} {
-    @content;
+        @content;
     }
+
     @-moz-keyframes #{$name} {
-    @content;
+        @content;
     }
+
     @keyframes #{$name} {
-    @content;
+        @content;
     }
 }
 
@@ -41,11 +44,13 @@
     left: 50%;
     @include prefixer(transform, translateX(-50%), webkit moz o);
 }
+
 @mixin verticalCenterer() {
     position: absolute;
     top: 50%;
     @include prefixer(transform, translateY(-50%), webkit moz o);
 }
+
 //horizantal and vertical centering
 @mixin centerer() {
     position: absolute;
@@ -53,33 +58,40 @@
     left: 50%;
     @include prefixer(transform, translate(-50%, -50%), webkit moz o);
 }
-@mixin contentCenterer(){
+
+@mixin contentCenterer() {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-@mixin contentVericalCenterer(){
+
+@mixin contentVericalCenterer() {
     display: flex;
     align-items: center;
 }
-@mixin contentHorizantalCenterer(){
+
+@mixin contentHorizantalCenterer() {
     display: flex;
     justify-content: center;
 }
-@mixin flexBetween(){
-display: flex;
-justify-content: space-between;
-align-items: center;
+
+@mixin flexBetween() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-@mixin columnFlex(){
+
+@mixin columnFlex() {
     display: flex;
     flex-direction: column;
 }
-@mixin flexAlignCenter(){
+
+@mixin flexAlignCenter() {
     display: flex;
     align-items: center;
 }
-  //circle shape
+
+//circle shape
 @mixin circle($dimension) {
     width: $dimension;
     height: $dimension;
@@ -87,27 +99,31 @@ align-items: center;
 }
 
 // main box shadow
-@mixin mainBoxShadow(){
-    @include prefixer(box-shadow, 0 0 10px #ddd,$prefixes);
+@mixin mainBoxShadow() {
+    @include prefixer(box-shadow, 0 0 10px #ddd, $prefixes);
 }
+
 //triangle mixin
 @mixin triangle($direction, $color: currentcolor, $size: 1em) {
     @if not index(top right bottom left, $direction) {
-    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+        @error "Direction must be either `top`, `right`, `bottom` or `left`.";
     }
+
     width: 0;
     height: 0;
     content: '';
     z-index: 2;
     border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
-    
+
     $perpendicular-borders: $size solid transparent;
-    
-    @if $direction == top or $direction == bottom {
-    border-left: $perpendicular-borders;
-    border-right: $perpendicular-borders;
-    } @else if $direction == right or $direction == left {
-    border-bottom: $perpendicular-borders;
-    border-top: $perpendicular-borders;
+
+    @if $direction==top or $direction==bottom {
+        border-left: $perpendicular-borders;
+        border-right: $perpendicular-borders;
+    }
+
+    @else if $direction==right or $direction==left {
+        border-bottom: $perpendicular-borders;
+        border-top: $perpendicular-borders;
     }
 }

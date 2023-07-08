@@ -1,7 +1,5 @@
 import React from 'react'
 import MainHeading from '../utils/MainHeading'
-import cupsImage from '../../assets/imgs/cups.png';
-import lampImage from '../../assets/imgs/lamp-stand.png';
 import '../../scss/components/Home/HomeProducts.scss';
 import SeeMore from '../utils/SeeMore';
 import { Swiper, SwiperSlide } from "swiper/react";

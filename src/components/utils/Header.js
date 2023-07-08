@@ -42,12 +42,6 @@ function Header() {
       window.removeEventListener('scroll', handleSectionScroll);
     };
   }, []);
-
-  let word = '';
-  if (sessionStorage.getItem('searchWord') !== null) {
-    word = sessionStorage.getItem('searchWord');
-  }
-
   return (
     <div className={`header ${isHeaderFixed ? 'fixed' : ''}`}>
       <div className="container">
@@ -61,7 +55,7 @@ function Header() {
             aria-label="Search"
             type="search"
             onChange={onSearchWordChange}
-            value={word}
+            value={searchWord}
           />
         </div>
 

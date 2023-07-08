@@ -15,7 +15,7 @@ function Footer() {
                     <div className="boxes">
                         <div className="box about">
                             <h3 className='title'>About</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati eius vel quia delectus labore? Eos, ut modi assumenda veritatis temporibus facere impedit quisquam fuga officiis dolores cum cupiditate sit? Ipsa.</p>
+                            <p>Can i tie the world with YH Tranding? Or what's even YH Trading? It's a reliable partner in cargo transportation whether as containers, small to oversized shipments, all the way from Iran. And since we understand the importance of safe and timely delivery for your products, we've been the priority for our clients for many years. Whether you're a small business owner or a multinational corporation, you're welcome from YH Trading, were you'll experience the different.</p>
                         </div>
                         <div className="box categories">
                             <h3 className="title">Categories</h3>
@@ -60,7 +60,7 @@ function Footer() {
                                 <FontAwesomeIcon icon={faTiktok} />
                             </div>
                         </a>
-                        <a href="">
+                        <a href="https://wa.me/9613083785">
                             <div className="icon">
                                 <FontAwesomeIcon icon={faWhatsapp} />
                             </div>

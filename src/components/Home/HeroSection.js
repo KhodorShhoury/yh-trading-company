@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../scss/components/Home/HeroSection.scss';
 import toolsImage from '../../assets/imgs/34958.png';
+import { NavLink } from 'react-router-dom';
 function HeroSection() {
     return (
         <div className="hero-section">
@@ -14,7 +15,7 @@ function HeroSection() {
                     </div>
                     <div className="links">
                     <div className='link shop-now'>
-                            <a href="#">shop now</a>
+                            <NavLink to="/products">shop now</NavLink>
                     </div>
                         
                     </div>

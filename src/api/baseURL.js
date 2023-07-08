@@ -1,3 +1,3 @@
 import axios from "axios";
-const baseURL = axios.create({ baseURL: "https://yaser-housing.mohammadazzam.dev"});
+const baseURL = axios.create({ baseURL: "https://admin.yh-trading.store"});
 export default baseURL;

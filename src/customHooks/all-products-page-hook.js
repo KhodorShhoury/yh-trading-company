@@ -5,16 +5,16 @@ import { getAllProducts, getProductsBySearch, getProductsOnPage } from '../redux
 function AllProductsPageHook() {
     const dispatch = useDispatch();
     const [initializeLoading, setIntializeLoading] = useState(true);
-    const getProducts = async () => {
-        let word = "";
-        if (sessionStorage.getItem("searchWord") != null)
-            word = sessionStorage.getItem("searchWord");
-        await dispatch(getProductsBySearch(`query=${word}`))
+    const [searchWord, setSearchWord] = useState(''); // New state for search word
+
+    const getProducts = async (searchWord) => {
+        await dispatch(getProductsBySearch(`query=${searchWord}`))
             .then(() => setIntializeLoading(false));
     }
+
     useEffect(() => {
-        getProducts();
-    }, []);
+        getProducts(searchWord);
+    }, [searchWord]); // Trigger getProducts when searchWord changes
 
     const products = useSelector(state => state.allProducts.products);
     const loading = useSelector(state => state.allProducts.loading);
@@ -30,16 +30,17 @@ function AllProductsPageHook() {
         }
     } catch (e) { }
 
-
     const getPage = (pageNumber) => {
-        let word = "";
-        if (sessionStorage.getItem("searchWord") != null)
-            word = sessionStorage.getItem("searchWord");
         setIntializeLoading(true);
-        dispatch(getProductsBySearch(`page=${pageNumber}&query=${word}`))
+        dispatch(getProductsBySearch(`page=${pageNumber}&query=${searchWord}`))
             .then(() => setIntializeLoading(false));
     };
-    return [allProducts, loading || initializeLoading, currentPage, total, perPage, getPage, getProducts];
+
+    const onSearchWordChange = (e) => {
+        setSearchWord(e.target.value);
+    }
+
+    return [allProducts, loading || initializeLoading, currentPage, total, perPage, getPage, getProducts, onSearchWordChange];
 }
 
 export default AllProductsPageHook;
